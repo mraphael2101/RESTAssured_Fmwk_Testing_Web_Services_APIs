@@ -1,4 +1,4 @@
-package com.masteringrestassured.api.tests.post;
+package _02_com.masteringrestassured.api.tests.post;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
  * that the correct response is returned (Since this is a mock API it might
  * not return Response code 200, so check the documentation) */
 
-public class _01_Post_UserId_With_Non_Empty_Title_And_Body_Assert_Operation_Successful 
+public class _01_Post_Request_And_Assertion_To_Determine_If_Operation_Successful 
 {
 	@Test
 	public void postUserIdWithNonEmptyTitleAndBody_AssertOperationSuccessful() throws Exception
