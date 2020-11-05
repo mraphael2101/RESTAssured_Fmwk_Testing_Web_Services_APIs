@@ -1,7 +1,7 @@
 # RESTAssured_Fmwk_Testing_Web_Services_APIs
-Functional automation for API testing using the RESTAssured framework
+Functional automation for API testing using the Rest-Assured framework
 
-Please ensure that you add the below jar files to the build path before running the project
+Please ensure that you add the below jar files to the classpath before running the project
 testng-6.9.4.jar
 rest-assured-3.1.0.jar
 commons-codec-1.9.jar
