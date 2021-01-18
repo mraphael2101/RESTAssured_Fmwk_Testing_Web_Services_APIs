@@ -11,8 +11,8 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
 import io.restassured.specification.RequestSpecification;
 
-/* Authorization is the process of giving access to someone. If you are Authorized then 
-   you have access to that resource. Now to Authorize you need to present credentials 
+/* Authorisation is the process of giving access to someone. If you are Authorised then 
+   you have access to that resource. Now to Authorise you need to present credentials 
    and that process is known as Authentication */
 
 class User
@@ -37,13 +37,13 @@ public class _02_Get_Request__Authorization_Success_200_Response_Code
 		String encodedString = new String(base64Encoded);
 		
 		JsonPath response = RestAssured
-		.given()
-			.header("Authorization", "Basic " + encodedString)
-		.when()
-			.get("http://restapi.demoqa.com/authentication/CheckForAuthentication")
-		.then()
-			.statusCode(200)
-			.extract().jsonPath();
+				.given()
+				.header("Authorization", "Basic " + encodedString)
+				.when()
+				.get("http://restapi.demoqa.com/authentication/CheckForAuthentication")
+				.then()
+				.statusCode(200)
+				.extract().jsonPath();
 			
 		Assert.assertEquals("OPERATION_SUCCESS"/*Value*/, response.getString("FaultId")/*Node Name*/);
 		Assert.assertEquals("Operation completed successfully"/*Value*/, response.getString("Fault")/*Node Name*/);

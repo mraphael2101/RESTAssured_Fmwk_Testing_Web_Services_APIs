@@ -1,18 +1,22 @@
 package _01_com.masteringrestassured.api.tests.get;
+
 import java.util.List;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
+
+import io.restassured.*;
+import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 
-
-
-public class _01_Get_Random_UserId_And_Print_Out_Email_Address 
-{ 
+public class _01_Get_Random_UserId_And_Print_Out_Email_Address { 
 	
 	@Test
 	public void getRandomUserIdAndPrintOutEmailAddress() throws Exception
-	{   	
-		/* Base URL of the RESTful web service */
+{   	
+		// Base URL of the RESTful web service
 		RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
  
 		/* Get the RequestSpecification of the request that you want to send
